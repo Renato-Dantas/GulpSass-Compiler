@@ -2,11 +2,16 @@
 
 ## To use these files, please, ensure that you had installed Node & NPM.
 
-### You can install automatc this script on you project running:
+### Automatic installation
+
+First, save the file "gulpfile.js" and "package.json" in the project root folder.
+Then run on the terminal:
 
 ```
     npm install
 ```
+
+This command will install all dependences in your project to run the Gulp file.
 
 ### To install manualy the dependences, please run:
 
