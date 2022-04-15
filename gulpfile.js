@@ -2,25 +2,25 @@ const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const minifyCss = require("gulp-clean-css");
 
-// Função que compila os arquivos SASS para CSS Minificados
+// Function that compile the Scss files into minified Css files
 gulp.task("compile", function () {
   return (
     gulp
-      // Caminho de onde estarão as pastas e arquivos SASS
+      // Path to the Scss folders and files
       .src(["*.scss", "./src/sass/**/*.scss"])
-      // Mensagem de log caso ocorra um erro de compilação
+      // Log message when occurs a compilation error
       .pipe(sass().on("error", sass.logError))
-      // Minifica os arquivos CSS
+      // Function that minify the Css files
       .pipe(minifyCss())
-      // Pasta de destino para os arquivos compilados
+      // Destiny path to css minified files folder
       .pipe(gulp.dest("css"))
   );
 });
 
-// Função Watch - observa as mudanças nos arquivos
+// Function that watch for changes on the files
 gulp.task("watch-sass", function () {
   gulp.watch(["*.scss", "./src/sass/**/*scss"], gulp.series("compile"));
 });
 
-// Função default executada sempre que o gulp for executado
+// Gulp default function
 gulp.task("default", gulp.series("watch-sass"));
