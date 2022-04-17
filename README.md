@@ -42,7 +42,7 @@ This command will install all dependences in your project to run the Gulp file.
 - To install Gulp Clean CSS (Dev Enviroment)
 
 ```
-    npm install gulp-clean-css
+    npm install -D gulp-clean-css
 ```
 
 ## Dev Dependenses
